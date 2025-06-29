@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: portfolio-backend
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: node server/index.js
+    envVars:
+      - key: MONGO_URI
+        value: your_mongodb_atlas_uri
+      - key: JWT_SECRET
+        value: your_jwt_secret
+    plan: free
